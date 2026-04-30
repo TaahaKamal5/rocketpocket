@@ -217,8 +217,9 @@ a {
   padding: clamp(32px, 3.4vw, 52px) clamp(30px, 3.2vw, 46px);
   border-radius: 18px;
   color: var(--ink);
-  background: rgba(251, 246, 241, 0.97);
+  background: rgba(251, 246, 241, 0.74);
   box-shadow: 10px 16px 0 rgba(118, 107, 75, 0.17);
+  backdrop-filter: blur(2px);
 }
 
 .nikkah-card {
