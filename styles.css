@@ -208,7 +208,7 @@ a {
 .nikkah-veil,
 .reception-veil {
   z-index: -1;
-  background: rgba(251, 246, 241, 0.52);
+  background: rgba(251, 246, 241, 0.25);
 }
 
 .nikkah-card,
