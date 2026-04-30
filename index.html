@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Wedding celebration website for Ozair and Aroob.">
+    <title>Ozair & Aroob | Wedding Celebration</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://cdn.coverr.co">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header" aria-label="Wedding site navigation">
+      <a class="brand" href="#home">O <span class="brand-palm" aria-hidden="true">&#127796;</span> A</a>
+    </header>
+
+    <main>
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <video class="hero-video" autoplay muted loop playsinline poster="https://images.pexels.com/videos/29821232/aerial-view-of-palm-lined-streets-in-los-angeles-29821232.jpeg?auto=compress&cs=tinysrgb&w=1800">
+          <source src="https://www.pexels.com/download/video/29821232/" type="video/mp4">
+        </video>
+        <div class="hero-tint"></div>
+        <div class="hero-content">
+          <h1 id="hero-title">Ozair &amp; Aroob</h1>
+          <p class="hero-location">Orange County, California</p>
+          <p class="hero-date">10.10.26 - 10.11.26</p>
+          <button class="primary-button" type="button" data-open-rsvp>RSVP</button>
+        </div>
+      </section>
+
+      <section id="welcome" class="nikkah-section" aria-labelledby="nikkah-title">
+        <img class="nikkah-image" src="assets/isoc-masjid-cropped.jpg" alt="Islamic Association of Orange County mosque exterior">
+        <div class="nikkah-veil"></div>
+        <div class="nikkah-card">
+          <h2 id="nikkah-title">Nikkah</h2>
+          <dl class="nikkah-list">
+            <div>
+              <dt>Date</dt>
+              <dd>Saturday, October 10, 2026</dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>Ceremony: 11:30 AM / Lunch</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Islamic Association of Orange County</dd>
+            </div>
+            <div>
+              <dt>Dress Code</dt>
+              <dd>TBD</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="palm-marker" aria-hidden="true">&#127796;</div>
+      </section>
+
+      <section id="ceremony" class="reception-section" aria-labelledby="reception-title">
+        <img class="reception-image" src="assets/mansion.jpg" alt="Muckenthaler Mansion exterior with palm trees">
+        <div class="reception-veil"></div>
+        <div class="reception-card">
+          <h2 id="reception-title">Reception</h2>
+          <dl class="reception-list">
+            <div>
+              <dt>Date</dt>
+              <dd>Sunday, October 11, 2026</dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>4:00 PM</dd>
+            </div>
+            <div>
+              <dt>Location</dt>
+              <dd>Muckenthaler Mansion</dd>
+            </div>
+          </dl>
+        </div>
+        <div class="palm-marker" aria-hidden="true">&#127796;</div>
+      </section>
+    </main>
+
+    <footer id="details" class="footer">
+      <h2>Join Us</h2>
+      <p>We can't wait to celebrate with you!</p>
+      <p>Please RSVP through our Zola portal by August 15th.</p>
+    </footer>
+
+    <dialog class="rsvp-dialog" aria-labelledby="rsvp-title">
+      <form class="rsvp-form" method="dialog">
+        <button class="close-button" type="button" aria-label="Close RSVP form" data-close-rsvp>&times;</button>
+        <p class="section-kicker">RSVP</p>
+        <h2 id="rsvp-title">Will you be joining us?</h2>
+        <label>
+          Name
+          <input type="text" name="name" autocomplete="name" placeholder="Your full name">
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" autocomplete="email" placeholder="you@example.com">
+        </label>
+        <label>
+          Attendance
+          <select name="attendance">
+            <option>Happily attending</option>
+            <option>Unable to attend</option>
+          </select>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" placeholder="Dietary notes, song requests, or a sweet note"></textarea>
+        </label>
+        <button class="primary-button primary-button--full" type="submit">Send RSVP</button>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
