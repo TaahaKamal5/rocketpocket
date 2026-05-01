@@ -219,7 +219,7 @@ a {
   border-radius: 18px;
   color: var(--ink);
   background: rgba(251, 246, 241, 0.56);
-  box-shadow: 10px 16px 0 rgba(118, 107, 75, 0.17);
+  box-shadow: none;
   backdrop-filter: blur(1px);
 }
 
@@ -234,7 +234,6 @@ a {
   justify-self: start;
   width: min(400px, calc(100% - 40px));
   margin: 36px 20px 96px clamp(20px, 5.6vw, 112px);
-  box-shadow: none;
 }
 
 .nikkah-card h2,
