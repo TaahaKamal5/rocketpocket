@@ -645,7 +645,7 @@ a {
   }
 
   .hero {
-    background: url("https://images.pexels.com/videos/29821232/aerial-view-of-palm-lined-streets-in-los-angeles-29821232.jpeg?auto=compress&cs=tinysrgb&w=1800") center / cover;
+    background: url("assets/la-palms-poster.png") center / cover;
   }
 
   .primary-button {
