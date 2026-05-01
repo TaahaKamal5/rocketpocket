@@ -234,7 +234,6 @@ a {
   justify-self: start;
   width: min(400px, calc(100% - 40px));
   margin: 36px 20px 96px clamp(20px, 5.6vw, 112px);
-  border: 8px solid rgba(63, 46, 38, 0.12);
   box-shadow: none;
 }
 
