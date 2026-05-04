@@ -1,11 +1,11 @@
-const dialog = document.querySelector(".rsvp-dialog");
-const openButtons = document.querySelectorAll("[data-open-rsvp]");
-const closeButton = document.querySelector("[data-close-rsvp]");
+const rsvpDialog = document.querySelector(".rsvp-dialog");
+const openRsvpButtons = document.querySelectorAll("[data-open-rsvp]");
+const closeRsvpButton = document.querySelector("[data-close-rsvp]");
 
-openButtons.forEach((button) => {
+openRsvpButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    if (typeof dialog.showModal === "function") {
-      dialog.showModal();
+    if (rsvpDialog && typeof rsvpDialog.showModal === "function") {
+      rsvpDialog.showModal();
       return;
     }
 
@@ -13,19 +13,21 @@ openButtons.forEach((button) => {
   });
 });
 
-closeButton.addEventListener("click", () => {
-  dialog.close();
-});
+if (rsvpDialog && closeRsvpButton) {
+  closeRsvpButton.addEventListener("click", () => {
+    rsvpDialog.close();
+  });
 
-dialog.addEventListener("click", (event) => {
-  const dialogBounds = dialog.getBoundingClientRect();
-  const clickedBackdrop =
-    event.clientX < dialogBounds.left ||
-    event.clientX > dialogBounds.right ||
-    event.clientY < dialogBounds.top ||
-    event.clientY > dialogBounds.bottom;
+  rsvpDialog.addEventListener("click", (event) => {
+    const dialogBounds = rsvpDialog.getBoundingClientRect();
+    const clickedBackdrop =
+      event.clientX < dialogBounds.left ||
+      event.clientX > dialogBounds.right ||
+      event.clientY < dialogBounds.top ||
+      event.clientY > dialogBounds.bottom;
 
-  if (clickedBackdrop) {
-    dialog.close();
-  }
-});
+    if (clickedBackdrop) {
+      rsvpDialog.close();
+    }
+  });
+}
