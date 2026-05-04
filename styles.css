@@ -232,6 +232,7 @@ a {
 }
 
 .invitation-section {
+  position: relative;
   display: grid;
   justify-items: center;
   gap: clamp(26px, 4vw, 44px);
@@ -239,10 +240,21 @@ a {
   text-align: center;
 }
 
+.invitation-section::before {
+  content: "";
+  position: absolute;
+  inset: clamp(20px, 3vw, 38px) max(16px, calc((100% - 820px) / 2));
+  border: 1px solid rgba(167, 123, 104, 0.34);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
 .invitation-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(28px, 4vw, 44px);
+  gap: clamp(24px, 4vw, 42px);
   align-items: start;
   width: min(660px, 100%);
 }
@@ -261,7 +273,30 @@ a {
   border-radius: 8px;
 }
 
+.invitation-divider {
+  display: grid;
+  grid-template-columns: minmax(42px, 1fr) auto minmax(42px, 1fr);
+  align-items: center;
+  gap: clamp(14px, 3vw, 28px);
+  width: min(460px, 86%);
+  margin: 0 auto;
+}
+
+.invitation-divider span {
+  height: 1px;
+  background: rgba(167, 123, 104, 0.34);
+}
+
+.invitation-divider img {
+  width: 52px;
+  height: 62px;
+  object-fit: contain;
+  opacity: 0.58;
+}
+
 .invitation-rsvp {
+  position: relative;
+  z-index: 1;
   margin-top: 2px;
 }
 
