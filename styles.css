@@ -80,9 +80,6 @@ a {
   border-radius: 999px;
   cursor: pointer;
   font-weight: 700;
-}
-
-.primary-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -91,6 +88,7 @@ a {
   padding: 0 42px;
   color: var(--rose);
   background: rgba(255, 255, 255, 0.96);
+  text-decoration: none;
   box-shadow: 0 18px 44px rgba(53, 40, 32, 0.24);
   transition: transform 180ms ease, background 180ms ease;
 }
@@ -140,16 +138,6 @@ a {
   margin: 0 auto;
   padding: clamp(80px, 11vw, 150px) 0 34px;
   text-align: center;
-}
-
-.eyebrow,
-.section-kicker {
-  margin: 0 0 14px;
-  color: currentColor;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
 }
 
 .hero h1 {
@@ -297,7 +285,18 @@ a {
 .invitation-rsvp {
   position: relative;
   z-index: 1;
-  margin-top: 2px;
+  min-height: 58px;
+  min-width: min(360px, 86vw);
+  margin-top: 8px;
+  color: var(--white);
+  background: var(--ink);
+  box-shadow: 0 22px 58px rgba(53, 40, 32, 0.3);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.invitation-rsvp:hover {
+  background: #4a392f;
 }
 
 .nikkah-section,
@@ -401,19 +400,6 @@ a {
   line-height: 1.32;
 }
 
-.rsvp-form .section-kicker {
-  color: var(--rose);
-}
-
-.rsvp-form h2 {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.35rem, 5vw, 4.6rem);
-  font-weight: 400;
-  line-height: 1;
-  letter-spacing: 0;
-}
-
 .footer {
   display: grid;
   justify-items: center;
@@ -440,42 +426,8 @@ a {
   line-height: 1.35;
 }
 
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-  width: min(880px, 100%);
-  margin-top: clamp(34px, 4vw, 52px);
-}
-
-.footer-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 50px;
-  min-width: 190px;
-  padding: 0 24px;
-  border: 1px solid rgba(53, 40, 32, 0.28);
-  border-radius: 999px;
-  color: var(--ink);
-  background: rgba(255, 255, 255, 0.52);
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
-}
-
-.footer-links a:hover {
-  border-color: rgba(53, 40, 32, 0.52);
-  background: rgba(255, 255, 255, 0.84);
-  transform: translateY(-1px);
-}
-
 .landing-link {
-  margin-top: 24px;
+  margin-top: 28px;
   color: rgba(53, 40, 32, 0.62);
   font-size: 0.88rem;
   font-weight: 700;
@@ -488,75 +440,6 @@ a {
 
 .landing-link:hover {
   color: var(--ink);
-}
-
-.rsvp-dialog {
-  width: min(560px, calc(100% - 32px));
-  padding: 0;
-  border: 0;
-  border-radius: 8px;
-  color: var(--ink);
-  background: var(--paper);
-  box-shadow: var(--shadow);
-}
-
-.rsvp-dialog::backdrop {
-  background: rgba(22, 32, 29, 0.66);
-}
-
-.rsvp-form {
-  position: relative;
-  display: grid;
-  gap: 16px;
-  padding: clamp(24px, 6vw, 42px);
-}
-
-.rsvp-form h2 {
-  margin-bottom: 10px;
-  font-size: clamp(2.15rem, 8vw, 3.4rem);
-}
-
-.rsvp-form label {
-  display: grid;
-  gap: 7px;
-  font-size: 0.88rem;
-  font-weight: 800;
-}
-
-.rsvp-form input,
-.rsvp-form select,
-.rsvp-form textarea {
-  width: 100%;
-  min-height: 46px;
-  border: 1px solid rgba(22, 32, 29, 0.2);
-  border-radius: 8px;
-  padding: 11px 12px;
-  color: var(--ink);
-  background: var(--white);
-}
-
-.rsvp-form textarea {
-  resize: vertical;
-}
-
-.primary-button--full {
-  width: 100%;
-  margin-top: 4px;
-}
-
-.close-button {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  width: 38px;
-  height: 38px;
-  border: 0;
-  border-radius: 50%;
-  color: var(--ink);
-  background: rgba(22, 32, 29, 0.08);
-  cursor: pointer;
-  font-size: 1.6rem;
-  line-height: 1;
 }
 
 @media (max-width: 840px) {
@@ -679,16 +562,6 @@ a {
 
   .footer {
     padding-top: 42px;
-  }
-
-  .footer-links {
-    display: grid;
-    gap: 12px;
-  }
-
-  .footer-links a {
-    width: min(100%, 310px);
-    min-width: 0;
   }
 
   .invitation-section {
